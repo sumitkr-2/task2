@@ -1,0 +1,7 @@
+project/
+ ├── sender/
+ ├── receiver/
+ ├── uploads/
+ ├── compressed/
+ ├── server.js
+ ├── package.json
