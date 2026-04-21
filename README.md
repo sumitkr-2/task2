@@ -1,21 +1,23 @@
-# Audio Transfer Project
+🎧 Audio Transfer & Compression System
 
-## Fixed & Enhanced
-- Sender (`http://localhost:4000/sender`): Upload audio → compresses to 64kbps MP3 → shows sizes.
-- Receiver (`http://localhost:4000/receiver`): Get Audio → shows file details (name, original/compressed sizes, **compression loss %**) + plays audio.
+Sumit Kumar (Roll No: 231210105)
 
-## Compression Loss
-Computed & displayed on receiver:  
-`Loss % = ((original - compressed) / original) * 100`  
-Persisted via `compressed/latest.json`.
+A web-based system that transfers audio efficiently using compression.
 
-**Optimized for lower loss:** 32kbps bitrate + 22.05kHz sample rate (reduced from 64kbps).
+🔹 Sender (/sender)
+Upload audio file
+Compresses to MP3 (32 kbps, 22.05 kHz)
+Shows original & compressed size
+🔹 Receiver (/receiver)
+Retrieves and plays audio
+Displays file details + compression loss
+📊 Formula
+Loss %=
+Original
+(Original−Compressed)
+	​
 
-## Test Flow
-1. Open sender, pick any audio file (mp3/wav/etc).
-2. Click Send → see sizes on sender.
-3. Open receiver, click Get Audio → see full details incl. loss % + play audio.
+×100
+⚙️ Key Point
 
-Server running on 4000 (npm start). FFmpeg 8.1 used for compression.
-
-Details shown via /files endpoint (e.g. curl http://localhost:4000/files after upload).
+Optimized for smaller size with minimal quality loss using lossy compression.
