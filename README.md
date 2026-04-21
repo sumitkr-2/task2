@@ -10,6 +10,9 @@ Compresses to MP3 (32 kbps, 22.05 kHz)
 Shows original & compressed size
 🔹 Receiver (/receiver)
 Retrieves and plays audio
+
+
+
 Displays file details + compression loss
 📊 Formula
 Loss %=
